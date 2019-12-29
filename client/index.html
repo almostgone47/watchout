@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel='stylesheet' type='css' href='styles.css'>
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
     <div class="scoreboard">
       <!-- Modify the scoreboard when important events occur in your game! -->
-      <div class="highscore">High score: <span>0</span></div>
-      <div class="current">Current score: <span>0</span></div>
-      <div class="collisions">Collisions: <span>0</span></div>
+      <div>
+        <div class="high">High score: <span id="highScore">-9999999</span></div>
+        <div class="current">Current score: -<span id="currentScore">0</span></div>
+        <div class="collisions">Chances: <span id="lives">3</span></div>
+      </div>
+      <div>
+        <button id="start">Start Game</button>
+        <button id="reset">Reset Game</button>
+      </div>
     </div>
-    <div class="board"><div class="mouse"></div></div>
-    <script src="lib/d3.js" charset="utf-8"></script>
+
+    <div class="board">
+      <div class="mouse"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v5.js"></script>
     <script src='watchout.js'></script>
   </body>
 </html>
